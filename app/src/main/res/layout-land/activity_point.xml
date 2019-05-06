@@ -1,34 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-    <android.support.constraint.ConstraintLayout tools:context=".PointActivity" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PointActivity">
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="337dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/desc"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintBaseline_toBaselineOf="@+id/description" android:text="@string/desc" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/desc"
+        app:layout_constraintBaseline_toBaselineOf="@+id/description"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/description" app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/photo" app:layout_constraintEnd_toEndOf="parent" android:importantForAutofill="no" android:inputType="text" android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/previous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintBaseline_toBaselineOf="@+id/latitude" android:text="@string/lat" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="112dp"
+        android:layout_height="29dp"
+        android:text="@string/lat"
+        tools:layout_editor_absoluteX="383dp"
+        tools:layout_editor_absoluteY="30dp" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/latitude" app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/description" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/latitude"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/longitude" app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/latitude" app:layout_constraintEnd_toEndOf="parent" android:importantForAutofill="no" android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/longitude"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitude" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/date" app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/longitude" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitude" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/textView3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintBaseline_toBaselineOf="@+id/longitude" tools:text="Longitude" android:text="@string/longitude" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        app:layout_constraintBaseline_toBaselineOf="@+id/longitude"
+        tools:layout_editor_absoluteX="383dp"
+        tools:text="Longitude" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="0dp" android:id="@+id/textView4" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintBaseline_toBaselineOf="@+id/date" tools:text="Date" android:text="@string/date" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/date"
+        tools:layout_editor_absoluteX="383dp"
+        tools:text="Date" />
 
-    <android.support.constraint.Guideline android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/guideline" app:layout_constraintGuide_begin="115dp" android:orientation="vertical"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="115dp" />
 
-    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:contentDescription="Delete" android:id="@+id/delButton" app:layout_constraintEnd_toStartOf="@+id/previous" android:layout_marginEnd="8dp" app:srcCompat="@android:drawable/ic_delete" app:layout_constraintBottom_toBottomOf="parent" android:visibility="invisible" android:onClick="clickedDel" android:layout_marginBottom="8dp"/>
+    <ImageButton
+        android:id="@+id/delButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/del"
+        android:onClick="clickedDel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/previous"
+        app:srcCompat="@android:drawable/ic_delete" />
 
     <ImageButton
         android:id="@+id/saveData"
@@ -41,7 +130,16 @@
         app:layout_constraintEnd_toStartOf="@+id/next"
         app:srcCompat="@android:drawable/ic_menu_save" />
 
-    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/makePhoto" app:layout_constraintEnd_toStartOf="@+id/saveData" android:layout_marginEnd="8dp" app:srcCompat="@android:drawable/ic_menu_camera" app:layout_constraintBottom_toBottomOf="parent" android:onClick="clickedMakePhoto" android:layout_marginBottom="8dp"/>
+    <ImageButton
+        android:id="@+id/makePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="clickedMakePhoto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveData"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <ImageButton
         android:id="@+id/mydata"
@@ -54,8 +152,38 @@
         app:layout_constraintEnd_toStartOf="@+id/makePhoto"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
-    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/previous" app:layout_constraintEnd_toStartOf="@+id/mydata" android:layout_marginEnd="8dp" app:srcCompat="@android:drawable/ic_media_previous" app:layout_constraintBottom_toBottomOf="parent" android:visibility="invisible" android:onClick="clickedPrevious" android:layout_marginBottom="8dp"/>
+    <ImageButton
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="clickedPrevious"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mydata"
+        app:srcCompat="@android:drawable/ic_media_previous" />
 
-    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/next" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" app:srcCompat="@android:drawable/ic_media_next" app:layout_constraintBottom_toBottomOf="parent" android:visibility="invisible" android:onClick="clickedNext" android:layout_marginBottom="8dp"/>
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="clickedNext"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_media_next" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="375dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
+

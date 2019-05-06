@@ -1,0 +1,26 @@
+DROP TABLE route;
+ 
+CREATE TABLE routes (
+ _id INTEGER(4) PRIMARY KEY AUTOINCREMENT,
+ name TEXT NOT NULL);
+
+
+DROP TABLE points;
+CREATE TABLE points (
+_id INTEGER PRIMARY KEY AUTOINCREMENT,
+date NUMERIC,
+latitude REAL,
+longitude REAL,
+photo BLOB,
+description TEXT,
+route_id INTEGER(4),
+	FOREIGN KEY (route_id) REFERENCES routes(id));
+
+DROP TABLE routecoordinates;
+CREATE TABLE routecoordinates (
+_id INTEGER PRIMARY KEY AUTOINCREMENT,
+latitude REAL,
+longitude REAL,
+date NUMERIC,
+route_id INTEGER,
+	FOREIGN KEY (route_id) REFERENCES routes(id));

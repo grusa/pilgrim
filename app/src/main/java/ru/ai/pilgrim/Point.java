@@ -1,16 +1,18 @@
-package ru.ai.pilgrim.point;
+package ru.ai.pilgrim;
+import android.graphics.Bitmap;
 import android.widget.ImageView;
 
+import java.sql.Blob;
 import java.util.Date;
 
- public class pointsdata {
+ public class Point {
         private String description;
         private Double latitude,longitude;
         private Date pointDate;
-        private ImageView photo;
+        private Bitmap photo;
         private int id;
 
-        public pointsdata(String description, Double latitude,Double longitude,Date pointDate,
+        /*public Point(String description, Double latitude,Double longitude,Date pointDate,
                      ImageView photo, int id) {
             this.description=description;
             this.latitude=latitude;
@@ -18,7 +20,13 @@ import java.util.Date;
             this.pointDate=pointDate;
             this.photo=photo;
             this.id=id;
+        }*/
+        public Point(String description,Bitmap photo) {
+            this.description = description;
+            this.photo=photo;
+
         }
+
 
         public String getDescription() {
             return description;
@@ -47,10 +55,10 @@ import java.util.Date;
         public void setPointDate (Date pointDate) {
             this.pointDate = pointDate;
         }
-        public ImageView getPhoto(ImageView photo) {
+        public Bitmap getPhoto() {
             return photo;
         }
-        public void setPhoto(ImageView photo) {
+        public void setPhoto(Bitmap photo) {
             this.photo = photo;
         }
 
@@ -61,4 +69,4 @@ import java.util.Date;
             this.id = id;
         }
     }
-}
+

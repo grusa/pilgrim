@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pilgrim">
+
+    <activity
+        android:id="@+id/pilgrim"
+        android:name="ru.ai.pilgrim.Pilgrim"
+        android:label="activity_pilgrim"
+        tools:layout="@layout/activity_pilgrim">
+        <action
+            android:id="@+id/action_look"
+            app:destination="@id/point"/>
+        <action
+            android:id="@+id/action_add"
+            app:destination="@id/point_add_NEW"/>
+    </activity>
+    <activity
+        android:id="@+id/point"
+        android:name="ru.ai.pilgrim.PointActivity"
+        android:label="activity_point"
+        tools:layout="@layout/activity_point" />
+    <activity
+        android:id="@+id/point_add_NEW"
+        android:name="ru.ai.pilgrim.PointActivity"
+        android:label="activity_point"
+        tools:layout="@layout/activity_point" />
+</navigation>

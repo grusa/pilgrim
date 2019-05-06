@@ -1,87 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/points_recyclerview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="horizontal"></android.support.v7.widget.RecyclerView>
+    tools:context=".Pilgrim">
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/points_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal">
+    </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:focusable="auto"
+        android:focusable="true"
         android:onClick="onClickedFab"
         android:src="@drawable/ic_add_black_48dp"
         android:visibility="visible"
         app:backgroundTint="@color/colorAccent"
-        app:fabSize="normal" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButtonRun"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:focusable="auto"
-        android:labelFor="@+id/floatingActionButton"
-        android:onClick="onClickStart"
-        android:visibility="invisible"
-        app:backgroundTint="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_play_arrow_black_48dp" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButtonStop"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:focusable="auto"
-        android:labelFor="@+id/floatingActionButton"
-        android:onClick="onClickStop"
-        android:visibility="invisible"
-        app:backgroundTint="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonPause"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_stop_black_48dp" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButtonPause"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:focusable="auto"
-        android:labelFor="@+id/floatingActionButton"
-        android:visibility="invisible"
-        app:backgroundTint="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonRun"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_pause_black_48dp" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButtonPoint"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:focusable="auto"
-        android:labelFor="@+id/floatingActionButton"
-        android:onClick="onClickedPoint"
-        android:src="@drawable/ic_add_location_black_48dp"
-        android:visibility="invisible"
-        app:backgroundTint="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonStop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_stop_black_48dp" />
-</android.support.v7.widget.RecyclerView>
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/points_recyclerview"
+        app:layout_constraintEnd_toEndOf="@+id/points_recyclerview" />
+</android.support.constraint.ConstraintLayout>
